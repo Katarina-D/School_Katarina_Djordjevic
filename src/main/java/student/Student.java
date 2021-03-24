@@ -15,6 +15,15 @@ public class Student {
         this.firstName = "";
         this.lastName = "";
         this.yearOfBirth = 0;
+        Course course = new Course();
+//       course.setName("QA");
+//       course.setNumberOfClasses(3);
+//       course.setCodeName("123");
+        this.course = course;
+        
+        Computer computer = new Computer();
+        this.computer = computer;
+        
     }
     
     public Student(String firstName, String lastName, int yearOfBirth) {
@@ -55,9 +64,19 @@ public class Student {
         return this.computer;
     }
     
+    
+    
     public void info() {
-        System.out.println("First name: " + this.firstName);
-        System.out.println("Last name: " + this.lastName);
-        System.out.println("Year of birth: " + this.yearOfBirth);
+        System.out.println("First name: " + getFirstName());
+        System.out.println("Last name: " + getLastName());
+        System.out.println("Year of birth: " + getYearOfBirth());
+        
+        System.out.println("Course name: " + getCourse().getName());
+        System.out.println("Course number of classes: " + getCourse().getNumberOfClasses());
+        
+        System.out.println("Process tact: " + getComputer().getProcessTact());
+        System.out.println("Memory: " + getComputer().getMemory());
+        System.out.println("Hard driver: " + getComputer().getHardDrive());
     }
+    
 }
